@@ -9,7 +9,7 @@ export async function getServerSideProps() {
     return { props: { data } };
 }
 
-export default function Home({ data }) {
+export default function Home({ data }: { data: string }) {
   console.log({ data })
   const serverData = JSON.parse(data);
   return (
